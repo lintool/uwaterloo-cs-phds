@@ -1,0 +1,62 @@
+:root { color-scheme: light; font-family: Georgia, "Times New Roman", serif; color: #252525; background: #fff; font-size: 18px; line-height: 1.55; }
+* { box-sizing: border-box; }
+body { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
+a { color: #244f70; text-underline-offset: .16em; }
+a:hover { color: #111; }
+a:focus-visible, input:focus-visible, select:focus-visible, button:focus-visible { outline: 3px solid #95651b; outline-offset: 4px; }
+[hidden] { display: none !important; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: 2rem; line-height: 1.2; font-weight: normal; max-width: 850px; margin-bottom: .6rem; }
+.catalog-header { padding-top: 52px; padding-bottom: 24px; border-bottom: 2px solid #343434; margin-bottom: 26px; }
+.catalog-header p, .supervisors, .result-count, footer, .eyebrow, .back, .year-nav, .filters, dt, .exception, .detail-header { font-family: system-ui, sans-serif; }
+.catalog-header p { margin: 0; color: #555; font-family: system-ui, sans-serif; font-size: .9rem; }
+.filters { display: flex; align-items: flex-end; gap: 16px; font-size: .85rem; }
+.filters label { display: block; margin-bottom: 6px; font-weight: 600; }
+.search-field { flex: 1; }
+input, select, button { font: inherit; color: inherit; border: 1px solid #8c8c8c; border-radius: 2px; background: white; padding: 10px 12px; min-height: 44px; }
+input { width: 100%; }
+button { cursor: pointer; background: #f5f5f5; }
+button:hover { background: #e8e8e8; }
+.result-count { color: #555; font-size: .8rem; margin: 16px 0 30px; }
+.catalog-layout { display: grid; grid-template-columns: 155px minmax(0, 1fr); gap: 40px; align-items: start; }
+.year-nav { font-size: .8rem; }
+.year-nav h2 { font-size: .8rem; margin-bottom: 12px; }
+.year-nav div { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 14px; }
+.year-nav a { padding: 3px 0; }
+.year-group { margin-bottom: 42px; }
+.year-group h2 { font-size: 1.5rem; font-weight: normal; border-bottom: 1px solid #bdbdbd; padding-bottom: 8px; margin-bottom: 0; scroll-margin-top: 24px; }
+.year-count { font-size: .85rem; color: #626262; }
+.entries { list-style: none; margin: 0; padding: 0; }
+.entry { padding: 20px 0; border-bottom: 1px solid #e4e4e4; overflow-wrap: anywhere; }
+.entry h3 { font-size: 1.06rem; margin-bottom: 4px; font-weight: bold; }
+.entry h3 a { text-decoration: none; }
+.entry h3 a:hover { text-decoration: underline; }
+.thesis { margin-bottom: 7px; }
+.supervisors { font-size: .8rem; color: #555; margin-bottom: 0; }
+.exception { font-size: .78rem; color: #624919; border-left: 3px solid #b59960; padding-left: 9px; margin: 9px 0 0; }
+footer { border-top: 1px solid #bdbdbd; padding: 22px 0 30px; margin-top: 35px; font-size: .78rem; color: #555; }
+footer p { margin: 0; }
+.skip-link { position: absolute; top: -100px; background: white; padding: 10px; }
+.skip-link:focus { top: 10px; }
+.detail-header { padding: 30px 0 22px; border-bottom: 2px solid #343434; font-size: .85rem; }
+.detail-header a { color: #252525; }
+.detail { max-width: 820px; padding: 28px 0 35px; overflow-wrap: anywhere; }
+.back { font-size: .8rem; margin-bottom: 36px; }
+.eyebrow { color: #555; font-size: .85rem; margin-bottom: 10px; }
+.detail-thesis { font-size: 1.35rem; line-height: 1.5; font-weight: normal; margin: 20px 0 36px; }
+dl { margin: 0; border-top: 1px solid #bdbdbd; }
+dl div { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 20px; padding: 14px 0; border-bottom: 1px solid #e4e4e4; }
+dt { font-size: .82rem; color: #555; }
+dd { margin: 0; }
+@media (max-width: 680px) {
+  body { padding: 0 20px; }
+  .catalog-header { padding-top: 30px; }
+  h1 { font-size: 1.7rem; }
+  .filters { flex-wrap: wrap; gap: 12px; }
+  .search-field { flex-basis: 100%; }
+  .catalog-layout { display: block; }
+  .year-nav { margin-bottom: 30px; }
+  .year-nav div { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+  dl div { grid-template-columns: 1fr; gap: 4px; }
+}
+@media print { .filters, .year-nav, .skip-link, .back { display: none !important; } body { max-width: none; padding: 0; } .catalog-layout { display: block; } .entry { break-inside: avoid; } a { color: inherit; } }
